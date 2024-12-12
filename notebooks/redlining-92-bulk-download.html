@@ -7541,8 +7541,7 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Bulk-Download-Data-with-earthaccess">Bulk Download Data with <code>earthaccess</code><a class="anchor-link" href="#Bulk-Download-Data-with-earthaccess">¶</a></h1><p>Whew – we’ve processed some reflectance data! But you may have noticed
 that your image doesn’t include all of Denver, or all the spectral bands
 you will need – Your search returned 60 different files covering
@@ -7553,27 +7552,13 @@ functions.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=adf013bb">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">store</span> -r denver_redlining_gdf data_dir
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=adf013bb">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=2b15bbdb-429b-4945-8b85-64bd87ae3f90">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It: Import packages</div></div><div class="callout-body-container callout-body"><p>Add imports for packages that help you:</p>
 <ol type="1">
 <li>Work with the file system interoperably</li>
@@ -7584,35 +7569,13 @@ functions.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4613eb54">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Interoperable file paths</span>
-<span class="kn">import</span> <span class="nn">re</span> <span class="c1"># Use regular expressions to extract metadata</span>
-
-<span class="kn">import</span> <span class="nn">earthaccess</span> <span class="c1"># Access NASA data from the cloud</span>
-<span class="c1"># Overlay plots</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># Process bit-wise cloud mask</span>
-<span class="c1"># Group and aggregate</span>
-<span class="c1"># Work with raster data</span>
-<span class="kn">from</span> <span class="nn">rioxarray.merge</span> <span class="kn">import</span> <span class="n">merge_arrays</span> <span class="c1"># Merge rasters</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=4613eb54">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0e50c432-a633-41a9-97fc-b625e3b1cc8c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It: Set up `earthaccess` connection</div></div><div class="callout-body-container callout-body"><p>As you did before, log in to your <code>earthaccess</code> account,
 search for the Denver data, and open the file connections. You will find
 that you have to re-run your search every time you access a file – keep
@@ -7620,27 +7583,13 @@ this in mind if you get errors later!</p></div></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e4a236a4">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Search earthaccess</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=e4a236a4">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=56611ab1-1649-4ff0-805d-cb7adac718b2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Putting-it-all-together">Putting it all together<a class="anchor-link" href="#Putting-it-all-together">¶</a></h2><p>To get a complete image, we will have to:</p>
 <ol>
 <li>Load in all 4 rasters that cover Denver</li>
@@ -7696,77 +7645,14 @@ top!</p></div></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=111609d7">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_image</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">bounds_gdf</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Load, crop, and scale a raster image from earthaccess</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    uri: file-like or path-like</span>
-<span class="sd">      File accessor downloaded or obtained from earthaccess</span>
-<span class="sd">    bounds_gdf: gpd.GeoDataFrame</span>
-<span class="sd">      Area of interest to crop to</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    cropped_da: rxr.DataArray</span>
-<span class="sd">      Processed raster</span>
-<span class="sd">    """</span>
-
-    <span class="k">return</span> <span class="n">cropped_da</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bc78de6d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_cloud_mask</span><span class="p">(</span><span class="n">cloud_uri</span><span class="p">,</span> <span class="n">bounds_gdf</span><span class="p">,</span> <span class="n">bits_to_mask</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Load an 8-bit Fmask file and process to a boolean mask</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    uri: file-like or path-like</span>
-<span class="sd">      Fmask file accessor downloaded or obtained from earthaccess</span>
-<span class="sd">    bounds_gdf: gpd.GeoDataFrame</span>
-<span class="sd">      Area of interest to crop to</span>
-<span class="sd">    bits_to_mask: list of int</span>
-<span class="sd">      The indices of the bits to mask if set</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    cloud_mask: np.array</span>
-<span class="sd">      Cloud mask</span>
-<span class="sd">    """</span>
-    
-    <span class="k">return</span> <span class="n">cloud_mask</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=111609d7">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=bc78de6d">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=db108d26-d642-46dd-b2be-b3eea22f0ad2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Our next new tool to help you write DRY and correct code is the regular
 expression. Regular expressions are a little like the patterns we use
 with <code>glob</code> that contain wildcard characters (<code>*</code>) – but, they are
@@ -7779,29 +7665,13 @@ the results.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e17fdd1b">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Search earthaccess</span>
-
-<span class="c1"># Open earthaccess results</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=e17fdd1b">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=20c3053a-8b99-4cc3-a74f-0d673c6d67b3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It: Get metadata with **regular expressions**</div></div><div class="callout-body-container callout-body"><p>Using the code below as a starting point, extract metadata from file
 names and put them into a <code>DataFrame</code>. This strategy will
 help you later on because you will be able to group rasters by their
@@ -7820,43 +7690,13 @@ through the <code>.full_name</code> attribute.</li>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4e63511e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Compile a regular expression to search for metadata</span>
-<span class="n">uri_re</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
-    <span class="o">...</span>
-<span class="p">)</span>
-
-<span class="c1"># Find all the metadata in the file name</span>
-<span class="n">uri_groups</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">uri_re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">file_name_to_search</span><span class="p">)</span><span class="o">.</span><span class="n">groupdict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">uri</span> <span class="ow">in</span> <span class="n">ea_uris</span><span class="p">]</span>
-
-<span class="c1"># Create a DataFrame with the metadata</span>
-<span class="n">raster_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">uri_groups</span><span class="p">)</span>
-
-<span class="c1"># Add the File-like URI to the DataFrame</span>
-
-<span class="c1"># Check the results</span>
-<span class="n">raster_df</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=4e63511e">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=c207a5fe-3060-4b29-aeb0-b9f7a0a0b91b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Now you are ready to run your code repeatedly on each raster you want to
 load. To do this, we’ll use a structure called a <code>for</code> loop, which runs
 the same code repeatedly with different variable values. The values that
@@ -7897,72 +7737,19 @@ value in the array.</p></div></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=11f26fa2">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Labels for each band to process</span>
-<span class="n">bands</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">'B02'</span><span class="p">:</span> <span class="s1">'red'</span><span class="p">,</span>
-    <span class="o">...</span>
-<span class="p">}</span>
-<span class="c1"># Initialize structure for saving images</span>
-<span class="n">denver_das</span> <span class="o">=</span> <span class="p">{</span><span class="n">band_name</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">band_name</span> <span class="ow">in</span> <span class="n">bands</span><span class="o">.</span><span class="n">values</span><span class="p">()}</span>
-<span class="k">for</span> <span class="n">tile_id</span><span class="p">,</span> <span class="n">tile_df</span> <span class="ow">in</span> <span class="n">raster_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'tile_id'</span><span class="p">):</span>
-    <span class="c1"># Load the cloud mask</span>
-
-    <span class="k">for</span> <span class="n">band_id</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tile_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'band_id'</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">band_id</span> <span class="ow">in</span> <span class="n">bands</span><span class="p">:</span>
-            <span class="n">band_name</span> <span class="o">=</span> <span class="n">bands</span><span class="p">[</span><span class="n">band_id</span><span class="p">]</span>
-            <span class="c1"># Process band</span>
-
-            <span class="c1"># Mask band</span>
-            
-            <span class="c1"># Store the resulting DataArray ofr later</span>
-            <span class="n">denver_das</span><span class="p">[</span><span class="n">band_name</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">band_masked_da</span><span class="p">)</span>
-
-<span class="c1"># Merge all tiles</span>
-<span class="n">denver_das</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="n">band_name</span><span class="p">:</span> <span class="n">merge_arrays</span><span class="p">(</span><span class="n">das</span><span class="p">)</span> 
-    <span class="k">for</span> <span class="n">band_name</span><span class="p">,</span> <span class="n">das</span> 
-    <span class="ow">in</span> <span class="n">denver_das</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-
-<span class="n">denver_das</span><span class="p">[</span><span class="s1">'green'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="s1">'Greens'</span><span class="p">,</span> <span class="n">robust</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=11f26fa2">
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8a3b974c-2e62-4db6-858d-74cf94624206">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <link href="./assets/styles.css" rel="stylesheet" type="text/css"/><div class="callout callout-style-default callout-titled callout-task"><div class="callout-header"><div class="callout-icon-container"><i class="callout-icon"></i></div><div class="callout-title-container flex-fill">Try It: Check your data</div></div><div class="callout-body-container callout-body"><p>Make a plot of one of your merged bands with the denver boundary
 superimposed. You should now have data for the whole city!</p></div></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=18321394">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plot a merged raster band</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput" id="cell-id=18321394">
 </div>
 </main>
 </body>
